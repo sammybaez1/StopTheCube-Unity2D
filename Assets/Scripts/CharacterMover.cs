@@ -8,7 +8,6 @@ public class CharacterMover : MonoBehaviour
     public Camera gameCamera;
     public Text scoreText;
     public AudioSource tapSound;
-    public static bool failFlag;
     public float moveSpeed = 0f;
     public SpriteRenderer spriteRenderer;
     public Sprite greenFace;
@@ -50,9 +49,7 @@ public class CharacterMover : MonoBehaviour
 
     void Update()
     {
-
         transform.position += direction * moveSpeed * Time.deltaTime;
-
 #if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
